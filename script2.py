@@ -1,6 +1,4 @@
-a=int(input())
-b=str(input())
-c=""
-for i in range(0,len(b),3):
-    c+=b[i:i+a+1:-1]
-print(c)
+a=list(map(int, input().split()))
+for i in range(0,len(a)-1,2):
+	a[i],a[i+1]=a[i+1],a[i]
+print(a)
